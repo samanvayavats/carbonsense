@@ -1,10 +1,22 @@
 import prisma from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcrypt";
+import { uploadStreamToCloudinary } from "@/lib/uploadoncloudinary";
 
 export async function POST(req: NextRequest, res: NextResponse) {
   try {
-    const { name, email, password, avatar } = await req.json();
+    const body = await req.formData();
+    const name = body.get("name") as string;
+    const email = body.get("email") as string;
+    const password = body.get("password") as string;
+    const avatar = body.get("avatar");
+
+    if (!name || !email || !password || !avatar) {
+      return NextResponse.json(
+        { message: "all the field is required" },
+        { status: 401 },
+      );
+    }
 
     const isExits = await prisma.user.findUnique({
       where: {
@@ -20,6 +32,19 @@ export async function POST(req: NextRequest, res: NextResponse) {
       );
     }
 
+    // uploading on cloudinary
+    const imageBuffer = Buffer.from(await (avatar as Blob).arrayBuffer());
+    const storedImageOnCloudinary = await uploadStreamToCloudinary(imageBuffer);
+
+    if (!storedImageOnCloudinary) {
+      return NextResponse.json(
+        { message: "something went wrong on uploading the media" },
+        { status: 409 },
+      );
+    }
+
+    const avatarFromCloudinary = storedImageOnCloudinary?.secure_url as string;
+
     // hashing the password
     const salt = bcrypt.genSaltSync(10);
     const hashPassword = bcrypt.hashSync(password, salt);
@@ -30,7 +55,8 @@ export async function POST(req: NextRequest, res: NextResponse) {
         name: name,
         email: email,
         password: hashPassword,
-        avatar: avatar,
+        avatar: avatarFromCloudinary,
+        avatarPublicId:storedImageOnCloudinary?.public_id
       },
       select: {
         id: true,

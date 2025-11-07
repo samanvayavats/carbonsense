@@ -19,6 +19,7 @@ model User {
   email          String?          @unique
   password       String
   avatar         String?
+  avatarPublicId String?
   communities    Communities[]
   aiChats        AiChats[]
   createdAt      DateTime         @default(now())
@@ -64,6 +65,7 @@ model Posts {
   userOwnerConnection    User        @relation(fields: [ownerId], references: [id])
   postedBy               String
   imageUrl               String?
+  avatarPublicId         String?
   imageCaption           String?
   imageLikes             Int?
   createdAt              DateTime    @default(now())
