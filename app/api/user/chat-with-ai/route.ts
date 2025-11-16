@@ -4,6 +4,40 @@ import chatWithAi from "@/lib/aichat";
 import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
 
+export async function GET() {
+  try {
+    const session = await getServerSession(authOptions);
+
+    // checking for the session
+    if (!session) {
+      return NextResponse.json(
+        { message: "Not authenticated" },
+        { status: 401 },
+      );
+    }
+
+    const user = await prisma.aiChats.findMany({
+      where: {
+        userId: Number(session?.user?.id)
+      }
+    })
+
+    return NextResponse.json({
+      message: "all the chats fetched !!!",
+      chats: user
+    })
+  } catch (error) {
+
+    console.log(error)
+    return NextResponse.json({
+      message: "something went wrong at the time of fetching the chats "
+    }
+      , { status: 500 }
+    )
+  }
+
+}
+
 // chat with the ai and updating the carbonEmission
 export async function POST(req: NextRequest) {
   try {
