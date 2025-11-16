@@ -56,7 +56,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         email: email,
         password: hashPassword,
         avatar: avatarFromCloudinary,
-        avatarPublicId:storedImageOnCloudinary?.public_id
+        avatarPublicId: storedImageOnCloudinary?.public_id,
       },
       select: {
         id: true,

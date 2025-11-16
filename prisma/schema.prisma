@@ -20,6 +20,7 @@ model User {
   password       String
   avatar         String?
   avatarPublicId String?
+  carbonEmission String?           @default("0")
   communities    Communities[]
   aiChats        AiChats[]
   createdAt      DateTime         @default(now())

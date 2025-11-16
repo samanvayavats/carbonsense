@@ -4,63 +4,58 @@ import bcrypt from "bcrypt";
 import { SessionStrategy } from "next-auth";
 
 export const authOptions = {
+  session: {
+    strategy: "jwt" as SessionStrategy,
+  },
+
   providers: [
     CredentialsProvider({
-      name: "username",
+      name: "Credentials",
       credentials: {
-        username: { label: "username", type: "text", placeholder: "username" },
-        password: { label: "password", type: "text", placeholder: "password" },
+        username: { label: "username", type: "text" },
+        password: { label: "password", type: "password" },
       },
-      async authorize(credentials: any, req) {
-        console.log(credentials);
-        const username = credentials?.username;
-        const password = credentials?.password;
+
+      async authorize(credentials) {
+        if (!credentials?.username || !credentials?.password) return null;
 
         const user = await prisma.user.findUnique({
-          where: {
-            name: username,
-          },
+          where: { name: credentials.username },
         });
 
-        const isPasswordCorrect = bcrypt.compareSync(
-          password,
-          user?.password || "",
-        );
+        if (!user) return null;
 
-        if (!isPasswordCorrect || !user) {
-          return null;
-        }
+        const valid = await bcrypt.compare(credentials.password, user.password);
+        if (!valid) return null;
 
         return {
           id: String(user.id),
-          name: user?.name,
-          email: user?.email,
+          name: user.name,
+          email: user.email,
         };
-
-        return null;
       },
     }),
   ],
+
   callbacks: {
-    async jwt({ token, user }: { token: any; user?: { id?: string } }) {
-      // user is only available on first login
+    async jwt({ token, user }: { token: any; user?: any }) {
       if (user) {
-        token.id = user.id; // store user id in JWT
+        token.id = user.id;
+        token.name = user.name;
+        token.email = user.email;
       }
       return token;
     },
+
     async session({ session, token }: { session: any; token: any }) {
-      if (token) {
-        // ensure user object exists to avoid runtime errors and allow assignment
-        (session as any).user = (session as any).user || {};
-        (session as any).user.id = token.id; // attach id to session.user
-      }
+      session.user = {
+        id: token.id,
+        name: token.name,
+        email: token.email,
+      };
       return session;
     },
   },
 
-  session: {
-    strategy: "jwt" as SessionStrategy,
-  },
   secret: process.env.NEXTAUTH_SECRET,
 };
