@@ -1,4 +1,3 @@
-// myModule.js (continued)
 import cloudinary from "./cloudinary";
 import streamifier from "streamifier";
 import { UploadApiResponse } from "cloudinary";

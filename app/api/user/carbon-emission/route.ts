@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
 
-// getting the carbon emission of the user 
+// getting the carbon emission of the user
 export async function GET() {
   try {
     const session = await getServerSession(authOptions);

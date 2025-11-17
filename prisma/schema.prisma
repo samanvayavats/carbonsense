@@ -31,18 +31,20 @@ model User {
 }
 
 model Communities {
-  id                  Int              @id @default(autoincrement())
-  totalCarbonEmission Int              @default(0)
-  communityName       String           @unique
-  communityAvatar     String?
-  totalParticipants   Int              @default(0)
-  communityChats      CommunityChats[]
-  participants        Participants[]
-  posts               Posts[]
-  communityOwnerId    Int
-  communityOwner      User             @relation(fields: [communityOwnerId], references: [id])
-  createdAt           DateTime         @default(now())
-  updatedAt           DateTime         @updatedAt
+  id                      Int              @id @default(autoincrement())
+  communityOwnerName  String?
+  totalCarbonEmission     Int              @default(0)
+  communityName           String           @unique
+  communityAvatar         String?
+  CommunityAvatarPublicId String?
+  totalParticipants       Int              @default(0)
+  communityChats          CommunityChats[]
+  participants            Participants[]
+  posts                   Posts[]
+  communityOwnerId        Int
+  communityOwner          User             @relation(fields: [communityOwnerId], references: [id])
+  createdAt               DateTime         @default(now())
+  updatedAt               DateTime         @updatedAt
 }
 
 model Participants {
@@ -66,7 +68,7 @@ model Posts {
   userOwnerConnection    User        @relation(fields: [ownerId], references: [id])
   postedBy               String
   imageUrl               String?
-  avatarPublicId         String?
+  imagePublicId          String?
   imageCaption           String?
   imageLikes             Int?
   createdAt              DateTime    @default(now())
