@@ -1,0 +1,99 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             Int              @id @default(autoincrement())
+  name           String           @unique
+  email          String?          @unique
+  password       String
+  avatar         String?
+  avatarPublicId String?
+  carbonEmission String?          @default("0")
+  communities    Communities[]
+  aiChats        AiChats[]
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  posts          Posts[]
+  participants   Participants[]
+  communityChats CommunityChats[]
+}
+
+model Communities {
+  id                      Int              @id @default(autoincrement())
+  communityOwnerName      String?
+  totalCarbonEmission     Int              @default(0)
+  communityName           String           @unique
+  communityAvatar         String?
+  CommunityAvatarPublicId String?
+  totalParticipants       Int              @default(0)
+  communityChats          CommunityChats[]
+  participants            Participants[]
+  posts                   Posts[]
+  communityOwnerId        Int
+  communityOwner          User             @relation(fields: [communityOwnerId], references: [id])
+  createdAt               DateTime         @default(now())
+  updatedAt               DateTime         @updatedAt
+}
+
+model Participants {
+  id                              Int         @id @default(autoincrement())
+  participantsUserId              Int
+  participantsUserConnection      User        @relation(fields: [participantsUserId], references: [id])
+  participantName                 String
+  communityName                   String
+  communityId                     Int
+  communityNameForEachParticipant Communities @relation(fields: [communityId], references: [id])
+  createdAt                       DateTime    @default(now())
+  updatedAt                       DateTime    @updatedAt
+}
+
+model Posts {
+  id                     Int         @id @default(autoincrement())
+  communityName          String?
+  communityId            Int?
+  postedInWhichCommunity Communities? @relation(fields: [communityId], references: [id])
+  ownerId                Int
+  userOwnerConnection    User        @relation(fields: [ownerId], references: [id])
+  postedBy               String
+  imageUrl               String?
+  imagePublicId          String?
+  imageCaption           String?
+  imageLikes             Int?       @default(0)
+  createdAt              DateTime    @default(now())
+  updatedAt              DateTime    @updatedAt
+}
+
+model CommunityChats {
+  id                   Int         @id @default(autoincrement())
+  communityId          Int
+  chatInWhichCommunity Communities @relation(fields: [communityId], references: [id])
+  communityName        String
+  userName             String
+  userId               Int
+  chatByUser           User        @relation(fields: [userId], references: [id])
+  userchats            String?
+  createdAt            DateTime    @default(now())
+  updatedAt            DateTime    @updatedAt
+}
+
+model AiChats {
+  id             Int      @id @default(autoincrement())
+  userId         Int
+  userConnection User     @relation(fields: [userId], references: [id])
+  chatFromUser   String?
+  aiResponse     String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/projects/carbonsense/app/page.tsx"],"sourcesContent":["\"use client\";\nimport { useSession } from \"next-auth/react\";\nimport Image from \"next/image\";\n\nexport default function Home() {\n  const session = useSession();\n  return (\n    <div>\n      i m making the backend for the carbonsense {JSON.stringify(session)}\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AACA;AADA;;;AAIe,SAAS;IACtB,MAAM,UAAU,IAAA,4JAAU;IAC1B,qBACE,8OAAC;;YAAI;YACyC,KAAK,SAAS,CAAC;;;;;;;AAGjE","debugId":null}}]
+}
