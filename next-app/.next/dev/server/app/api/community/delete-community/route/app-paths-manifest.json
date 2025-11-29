@@ -1,0 +1,3 @@
+{
+  "/api/community/delete-community/route": "app/api/community/delete-community/route.js"
+}

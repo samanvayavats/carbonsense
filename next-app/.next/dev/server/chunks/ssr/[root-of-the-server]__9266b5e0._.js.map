@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///D:/projects/carbonsense/app/provider.tsx"],"sourcesContent":["\"use client\";\nimport { SessionProvider } from \"next-auth/react\";\nimport React from \"react\";\n\nexport function Provider({ children }: { children: React.ReactNode }) {\n  return <SessionProvider>{children}</SessionProvider>;\n}\n"],"names":[],"mappings":";;;;;AACA;AADA;;;AAIO,SAAS,SAAS,EAAE,QAAQ,EAAiC;IAClE,qBAAO,8OAAC,iKAAe;kBAAE;;;;;;AAC3B","debugId":null}}]
+}

@@ -1,0 +1,3 @@
+{
+  "/api/user/chat-with-ai/route": "app/api/user/chat-with-ai/route.js"
+}
