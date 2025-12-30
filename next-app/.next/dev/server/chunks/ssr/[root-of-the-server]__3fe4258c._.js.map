@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///D:/projects/carbonsense/next-app/app/community/%5B...id%5D/page.tsx"],"sourcesContent":["const page = ({params}:{params:{id :any}})=>{\r\n    const {id} = params\r\n\r\n    return <>\r\n    <p>this is the id of the community : {id}</p>\r\n    </>\r\n}\r\n\r\nexport default page"],"names":[],"mappings":";;;;;;AAAA,MAAM,OAAO,CAAC,EAAC,MAAM,EAAoB;IACrC,MAAM,EAAC,EAAE,EAAC,GAAG;IAEb,qBAAO;kBACP,cAAA,8OAAC;;gBAAE;gBAAmC;;;;;;;;AAE1C;uCAEe","debugId":null}}]
+}
