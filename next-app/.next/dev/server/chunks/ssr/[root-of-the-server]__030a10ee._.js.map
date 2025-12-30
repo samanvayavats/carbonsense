@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///D:/projects/carbonsense/next-app/app/%5B...community%5D/page.tsx"],"sourcesContent":["// app/blog/[slug]/page.js\r\nconst BlogPost = ({ params }:any) => {\r\n  // Access the dynamic segment value (e.g., 'post-1')\r\n  const { slug } = params; \r\n  \r\n  // Use 'slug' to fetch data from an API or database\r\n  // const postData = await fetchPostDetails(slug);\r\n\r\n  return (\r\n    <p>Showing the blog post for the slug: <strong>{slug}</strong></p>\r\n  );\r\n}\r\n\r\nexport default BlogPost;\r\n"],"names":[],"mappings":"AAAA,0BAA0B;;;;;;;AAC1B,MAAM,WAAW,CAAC,EAAE,MAAM,EAAM;IAC9B,oDAAoD;IACpD,MAAM,EAAE,IAAI,EAAE,GAAG;IAEjB,mDAAmD;IACnD,iDAAiD;IAEjD,qBACE,8OAAC;;YAAE;0BAAoC,8OAAC;0BAAQ;;;;;;;;;;;;AAEpD;uCAEe","debugId":null}}]
+}
