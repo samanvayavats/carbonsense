@@ -13,9 +13,10 @@ import {
   SidebarMenuItem,
   SidebarInset,
   SidebarTrigger,
+  SidebarFooter
 } from "@/components/ui/sidebar";
 
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import { Calendar, Home, Inbox, Search, BotMessageSquare   } from "lucide-react";
 
 // Menu items.
 const items = [
@@ -23,7 +24,7 @@ const items = [
   { title: "Inbox", url: "#", icon: Inbox },
   { title: "Calendar", url: "#", icon: Calendar },
   { title: "Search", url: "#", icon: Search },
-  { title: "Settings", url: "#", icon: Settings },
+  { title: "ChatAi", url: "#", icon: BotMessageSquare  },
 ];
 
 const Sidemenu = () => {

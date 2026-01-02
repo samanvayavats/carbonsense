@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/projects/carbonsense/next-app/components/ui/communities.tsx"],"sourcesContent":["import React from 'react'\r\nimport { Avatar } from '@radix-ui/react-avatar'\r\n\r\nconst communities = () => {\r\n  return (\r\n    <div>\r\n      \r\n    </div>\r\n  )\r\n}\r\n\r\nexport default communities\r\n"],"names":[],"mappings":";;;;;;AAGA,MAAM,cAAc;IAClB,qBACE,8OAAC;;;;;AAIL;uCAEe","debugId":null}},
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["file:///D:/projects/carbonsense/next-app/app/community/%5B...id%5D/page.tsx"],"sourcesContent":["'use client'\r\nimport React from \"react\"\r\nimport Communities from \"@/components/ui/communities\"\r\nconst page = ({params}:{params:Promise<{ id: string }>})=>{\r\n    const {id} = React.use(params)\r\n\r\n    return <>\r\n    {/* <p>this is the id of the community : {id}</p> */}\r\n    <Communities/>\r\n    </>\r\n}\r\n\r\nexport default page"],"names":[],"mappings":";;;;;AACA;AACA;AAFA;;;;AAGA,MAAM,OAAO,CAAC,EAAC,MAAM,EAAkC;IACnD,MAAM,EAAC,EAAE,EAAC,GAAG,gNAAK,CAAC,GAAG,CAAC;IAEvB,qBAAO;kBAEP,cAAA,8OAAC,2IAAW;;;;;;AAEhB;uCAEe","debugId":null}}]
+}
