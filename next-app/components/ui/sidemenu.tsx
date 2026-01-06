@@ -20,11 +20,11 @@ import { Calendar, Home, Inbox, Search, BotMessageSquare   } from "lucide-react"
 
 // Menu items.
 const items = [
-  { title: "Home", url: "#", icon: Home },
+  { title: "Home", url: "/", icon: Home },
   { title: "Inbox", url: "#", icon: Inbox },
   { title: "Calendar", url: "#", icon: Calendar },
   { title: "Search", url: "#", icon: Search },
-  { title: "ChatAi", url: "#", icon: BotMessageSquare  },
+  { title: "ChatAi", url: "/chatwithai", icon: BotMessageSquare  },
 ];
 
 const Sidemenu = () => {
