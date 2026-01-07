@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
 
         const uploadedPost = await prisma.posts.create({
             data: {
-                communityName: communityName,
+                communityName: communityName || '',
                 communityId: Number(communityId),
                 ownerId: Number(session?.user?.id),
                 postedBy: session?.user?.name,

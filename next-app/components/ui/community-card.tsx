@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
-
+import Link from 'next/link'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
     Card,
@@ -12,7 +12,7 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 const communityCard = () => {
-
+ 
     const cardData = [{
         id :Math.random(),
         CardTitle : "CarbonKills",
@@ -54,7 +54,7 @@ const communityCard = () => {
                 <CardTitle>{i.CardTitle}</CardTitle>
                 <CardDescription>{i.cardCarbon}</CardDescription>
                 <p>{i.cardDescription}</p>
-                   <Button className='py-4 px-20 text-green-700' variant={'outline'} > Explore</Button>
+                   <Link href={`/community/${i.id}`}><Button className='py-4 px-20 text-green-700' variant={'outline'} > Explore</Button></Link>
             <CardContent>
             </CardContent>
                 <CardAction><Avatar>
