@@ -1,10 +1,403 @@
-[00:00:02.614] Server  LOG      ✓ Ready in 1874ms
-[00:00:13.696] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 144
-[00:01:07.065] Server  LOG      ✓ Compiled in 114ms
-[00:01:07.096] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 144
-[00:01:24.706] Server  LOG      ✓ Compiled in 84ms
-[00:01:24.753] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 144
-[00:01:43.026] Server  LOG      ✓ Compiled in 159ms
-[00:01:43.088] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 144
-[00:01:48.181] Server  LOG      ✓ Compiled in 71ms
-[00:01:48.224] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 144
+[00:00:04.569] Server  LOG      ✓ Ready in 3.4s
+[00:00:04.602] Browser ERROR   [next-auth][error][CLIENT_FETCH_ERROR] 
+https://next-auth.js.org/errors#client_fetch_error Failed to fetch {"error":{"message":"Failed to fetch","name":"TypeError","stack":"TypeError: Failed to fetch\n    at _callee$ (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:1311:28)\n    at http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:496:26\n    at Generator.<anonymous> (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:320:63)\n    at Generator.next (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:269:29)\n    at asyncGeneratorStep (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:581:21)\n    at _next (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:593:17)\n    at http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:598:13\n    at new Promise (<anonymous>)\n    at http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:590:16\n    at fetchData (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:1288:23)\n    at _callee3$ (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:1562:49)\n    at http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:496:26\n    at Generator.<anonymous> (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:320:63)\n    at Generator.next (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:269:29)\n    at asyncGeneratorStep (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:581:21)\n    at _next (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:593:17)\n    at http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:598:13\n    at new Promise (<anonymous>)\n    at http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:590:16\n    at getSession (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:1552:25)\n    at _callee$ (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:1843:36)\n    at http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:496:26\n    at Generator.<anonymous> (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:320:63)\n    at Generator.next (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:269:29)\n    at asyncGeneratorStep (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:581:21)\n    at _next (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:593:17)\n    at http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:598:13\n    at new Promise (<anonymous>)\n    at Object._getSession (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:590:16)\n    at HTMLDocument.visibilityHandler (http://localhost:3000/_next/static/chunks/node_modules_1102ca32._.js:1902:96)"},"message":"Failed to fetch","url":"/api/auth/session"}
+[00:00:07.683] Server  LOG      ○ Compiling /upload-image ...
+[00:08:12.987] Server  LOG      ✓ Compiled in 285ms
+[00:08:24.232] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/upload-image" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:09:26.656] Server  LOG      ✓ Compiled in 157ms
+[00:09:30.371] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/upload-image" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:09:57.716] Server  LOG      ✓ Compiled in 135ms
+[00:10:07.553] Server  LOG      ✓ Compiled in 155ms
+[00:10:20.257] Server  LOG      ✓ Compiled in 164ms
+[00:10:29.668] Server  LOG      ✓ Compiled in 123ms
+[00:10:33.213] Server  LOG      ✓ Compiled in 137ms
+[00:12:03.920] Server  LOG      ✓ Compiled in 174ms
+[00:12:31.226] Server  LOG      ✓ Compiled in 134ms
+[00:12:54.737] Server  LOG      ✓ Compiled in 152ms
+[00:13:28.451] Server  LOG      ✓ Compiled in 244ms
+[00:14:00.288] Server  LOG      ✓ Compiled in 159ms
+[00:14:02.342] Server  LOG      ✓ Compiled in 121ms
+[00:22:08.188] Server  LOG      ✓ Compiled in 469ms
+[00:24:31.078] Server  LOG      ✓ Compiled in 402ms
+[00:38:10.649] Server  LOG      ✓ Compiled in 278ms
+[00:38:19.941] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/upload-image" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                            <div>
+                            ...
+                              <FieldGroup>
+                                <div data-slot="field-group" className={"group/fi..."}>
+                                  <RadioGroup>
+                                  <Field>
+                                  <Field>
+                                  <Field>
+                                  <Button className="bg-green-600" onClick={function handleSubmit}>
+                                    <button
+                                      data-slot="button"
+                                      data-variant="default"
+                                      data-size="default"
+                                      className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rou..."}
+                                      onClick={function handleSubmit}
+-                                     fdprocessedid="l94skg"
+                                    >
++                                     Submit
+                  ...
+
+[00:39:02.884] Server  LOG      ✓ Compiled in 133ms
+[00:39:07.332] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/upload-image" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:39:26.317] Server  LOG      ✓ Compiled in 170ms
+[00:39:33.057] Server  LOG      ✓ Compiled in 168ms
+[00:39:53.808] Server  LOG      ✓ Compiled in 159ms
+[00:40:19.969] Server  LOG      ✓ Compiled in 143ms
+[00:40:31.023] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/upload-image" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:40:56.145] Server  LOG      ✓ Compiled in 137ms
+[00:40:56.379] Browser ERROR   uncaughtError: ReferenceError: second is not defined
+[00:41:02.009] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:41:02.038] Server  LOG      ✓ Compiled in 193ms
+[00:45:39.744] Server  LOG      ✓ Compiled in 161ms
+[00:46:21.306] Server  LOG      ✓ Compiled in 151ms
+[00:46:49.748] Server  LOG      ✓ Compiled in 330ms
+[00:46:50.385] Browser ERROR   ./app/upload-image/page.tsx:46:95
+Parsing ecmascript source code failed
+  44 |                                 <Label htmlFor="Post-In-Community">Post-In-Community</Label>
+  45 |                             </div>
+> 46 |                             <div className="flex items-center space-x-2" onClick={swapButton}>>
+     |                                                                                               ^
+  47 |                                 <RadioGroupItem value="Post-Personally" id="Post-Personally" />
+  48 |                                 <Label htmlFor="Post-Personally">Post-Personally</Label>
+  49 |                             </div>
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/upload-image/page.tsx [Client Component Browser]
+    ./app/upload-image/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload-image/page.tsx [Client Component SSR]
+    ./app/upload-image/page.tsx [Server Component]
+[00:46:56.082] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/upload-image" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                            <div>
+                            ...
+                              <FieldGroup>
+                                <div data-slot="field-group" className={"group/fi..."}>
+                                  <RadioGroup>
+                                  <Field>
+                                    <div role="group" data-slot="field" data-orientation="vertical" ...>
+                                      <FieldLabel>
+                                      <Input id="Communityname" type="text" className="placeholde..." ...>
+                                        <input
+                                          type="text"
+                                          data-slot="input"
+                                          className="file:text-foreground selection:bg-primary selection:text-primary-..."
+                                          id="Communityname"
+                                          placeholder="Go Green"
+-                                         fdprocessedid="7m8uad"
+                                        >
+                                  <Field>
+                                  <Field>
+                                  <Button className="bg-green-600" onClick={function handleSubmit}>
+                                    <button
+                                      data-slot="button"
+                                      data-variant="default"
+                                      data-size="default"
+                                      className={"inline-flex items-center justify-center gap-2 whitespace-nowrap rou..."}
+                                      onClick={function handleSubmit}
+-                                     fdprocessedid="1xexkl"
+                                    >
++                                     Submit
+                  ...
+
+[00:47:25.346] Server  LOG      ✓ Compiled in 142ms
+[00:47:33.113] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/upload-image" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:48:11.137] Server  LOG      ✓ Compiled in 134ms
+[00:48:21.754] Server  LOG      ✓ Compiled in 151ms
+[00:48:30.458] Server  LOG      ✓ Compiled in 149ms
+[00:48:37.597] Server  LOG      ✓ Compiled in 118ms
+[00:48:44.357] Server  LOG      ✓ Compiled in 134ms
+[00:48:49.916] Server  LOG      ✓ Compiled in 149ms
+[00:49:00.776] Server  LOG      ✓ Compiled in 132ms
+[00:49:06.954] Server  LOG      ✓ Compiled in 304ms
+[00:49:28.361] Server  LOG      ✓ Compiled in 138ms
+[00:49:35.152] Server  LOG      ✓ Compiled in 129ms
+[00:49:49.840] Server  LOG      ✓ Compiled in 173ms
+[00:50:07.975] Server  LOG      ✓ Compiled in 121ms
+[00:51:08.787] Server  LOG      ✓ Compiled in 165ms
+[00:51:16.166] Server  LOG      ○ Compiling / ...
+[00:51:17.567] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+-                           cz-shortcut-listen="true"
+                          >
+                  ...
+
+[00:51:25.292] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 144
