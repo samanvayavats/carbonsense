@@ -2,6 +2,7 @@ import React from 'react'
 import CommunityUserAvatar from './community-user-avatar'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from './button'
+import Link from 'next/link'
 import {
     Card,
     CardAction,
@@ -12,7 +13,7 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 
-const communities = () => {
+const communities = ({id}:{id:string}) => {
     return (
         <div className='flex flex-col items-center h-auto  w-full mr-3  '>
             <Avatar className='size-40 mt-1'>
@@ -29,7 +30,7 @@ const communities = () => {
                 </CardHeader>
 
                 <CardFooter className='w-full  justify-between py-2 text-green-700'>
-                    <CardTitle> <Button variant={'outline'}>expore more </Button></CardTitle>
+                    <Link href={`/explore-more/${id}`}><CardTitle> <Button variant={'outline'}>expore more </Button></CardTitle></Link>
                     <CardAction><CardTitle className='text-green-700'>
                         <Button variant={'outline'}>JOIN </Button></CardTitle></CardAction>
                 </CardFooter>

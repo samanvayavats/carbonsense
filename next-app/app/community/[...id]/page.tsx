@@ -6,7 +6,7 @@ const page = ({params}:{params:Promise<{ id: string }>})=>{
 
     return <>
     {/* <p>this is the id of the community : {id}</p> */}
-    <Communities/>
+    <Communities id = {id} />
     </>
 }
 
