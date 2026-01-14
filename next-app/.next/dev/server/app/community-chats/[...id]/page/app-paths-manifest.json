@@ -1,0 +1,3 @@
+{
+  "/community-chats/[...id]/page": "app/community-chats/[...id]/page.js"
+}

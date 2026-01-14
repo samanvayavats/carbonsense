@@ -59,18 +59,13 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --color-amber-500: #f99c00;
-    --color-green-500: #00c758;
     --color-green-600: #00a544;
     --color-green-700: #008138;
     --color-black: #000;
     --color-white: #fff;
     --spacing: .25rem;
-    --container-2xs: 18rem;
-    --container-xs: 20rem;
     --container-sm: 24rem;
     --container-md: 28rem;
-    --container-xl: 36rem;
     --container-2xl: 42rem;
     --text-xs: .75rem;
     --text-xs--line-height: calc(1 / .75);
@@ -98,6 +93,7 @@
     --radius-xs: .125rem;
     --radius-2xl: 1rem;
     --ease-in-out: cubic-bezier(.4, 0, .2, 1);
+    --animate-spin: spin 1s linear infinite;
     --animate-pulse: pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
@@ -107,8 +103,6 @@
 
   @supports (color: lab(0% 0 0)) {
     :root, :host {
-      --color-amber-500: lab(72.7183% 31.8672 97.9407);
-      --color-green-500: lab(70.5521% -66.5147 45.8072);
       --color-green-600: lab(59.0978% -58.6621 41.2579);
       --color-green-700: lab(47.0329% -47.0239 31.4788);
     }
@@ -552,10 +546,6 @@
     margin-top: calc(var(--spacing) * 1);
   }
 
-  .mt-2 {
-    margin-top: calc(var(--spacing) * 2);
-  }
-
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
@@ -566,6 +556,10 @@
 
   .mt-auto {
     margin-top: auto;
+  }
+
+  .mr-1 {
+    margin-right: calc(var(--spacing) * 1);
   }
 
   .mr-3 {
@@ -669,11 +663,6 @@
     height: calc(var(--spacing) * 10);
   }
 
-  .size-11 {
-    width: calc(var(--spacing) * 11);
-    height: calc(var(--spacing) * 11);
-  }
-
   .size-12 {
     width: calc(var(--spacing) * 12);
     height: calc(var(--spacing) * 12);
@@ -762,14 +751,6 @@
     width: var(--sidebar-width);
   }
 
-  .w-1\/2 {
-    width: 50%;
-  }
-
-  .w-2xs {
-    width: var(--container-2xs);
-  }
-
   .w-3\/4 {
     width: 75%;
   }
@@ -782,20 +763,8 @@
     width: calc(var(--spacing) * 5);
   }
 
-  .w-10 {
-    width: calc(var(--spacing) * 10);
-  }
-
-  .w-12 {
-    width: calc(var(--spacing) * 12);
-  }
-
   .w-40 {
     width: calc(var(--spacing) * 40);
-  }
-
-  .w-60 {
-    width: calc(var(--spacing) * 60);
   }
 
   .w-80 {
@@ -812,14 +781,6 @@
 
   .w-full {
     width: 100%;
-  }
-
-  .w-xl {
-    width: var(--container-xl);
-  }
-
-  .w-xs {
-    width: var(--container-xs);
   }
 
   .max-w-\(--skeleton-width\) {
@@ -907,6 +868,10 @@
     animation: var(--animate-pulse);
   }
 
+  .animate-spin {
+    animation: var(--animate-spin);
+  }
+
   .cursor-default {
     cursor: default;
   }
@@ -949,10 +914,6 @@
 
   .items-start {
     align-items: flex-start;
-  }
-
-  .justify-around {
-    justify-content: space-around;
   }
 
   .justify-between {
@@ -1079,11 +1040,6 @@
     border-radius: var(--radius-xs);
   }
 
-  .rounded-b-md {
-    border-bottom-right-radius: calc(var(--radius)  - 2px);
-    border-bottom-left-radius: calc(var(--radius)  - 2px);
-  }
-
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -1140,10 +1096,6 @@
     background-color: var(--accent);
   }
 
-  .bg-amber-500 {
-    background-color: var(--color-amber-500);
-  }
-
   .bg-background {
     background-color: var(--background);
   }
@@ -1172,10 +1124,6 @@
 
   .bg-foreground {
     background-color: var(--foreground);
-  }
-
-  .bg-green-500 {
-    background-color: var(--color-green-500);
   }
 
   .bg-green-600 {
@@ -1350,10 +1298,6 @@
     text-align: left;
   }
 
-  .text-right {
-    text-align: right;
-  }
-
   .font-mono {
     font-family: var(--font-mono);
   }
@@ -1440,10 +1384,6 @@
 
   .text-balance {
     text-wrap: balance;
-  }
-
-  .text-ellipsis {
-    text-overflow: ellipsis;
   }
 
   .whitespace-nowrap {
@@ -3271,6 +3211,12 @@
   syntax: "*";
   inherits: false;
   initial-value: "";
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes pulse {

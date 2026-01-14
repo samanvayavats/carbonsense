@@ -33,6 +33,7 @@ const communities = ({id}:{id:string}) => {
                     <Link href={`/explore-more/${id}`}><CardTitle> <Button variant={'outline'}>expore more </Button></CardTitle></Link>
                     <CardAction><CardTitle className='text-green-700'>
                         <Button variant={'outline'}>JOIN </Button></CardTitle></CardAction>
+                    <Link href={`/community-chats/${id}`}> <Button variant={'outline'}>Chats </Button></Link>
                 </CardFooter>
             </div>
 

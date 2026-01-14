@@ -1,5 +1,5 @@
 'use client'
-
+import axios from 'axios'
 import {
     Field,
     FieldGroup,
@@ -13,15 +13,34 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export default function FieldInput() {
 
-    const [avatar, setAvatar] = useState(null)
-
+    const [avatar, setAvatar] = useState<File | null>(null)
+    const [name, setname] = useState('')
+    const [email, setemail] = useState('')
+    const [password, setpassword] = useState('')
     const handleFileChange = (e: any) => {
         const selectedFile = e.target.files?.[0] || null
         setAvatar(selectedFile)
     }
 
-    const handleSubmit = () => {
-        console.log("Avatar file:", avatar)
+    const handleSubmit = async() => {
+        try {
+             const formdata = new FormData()
+                formdata.append('name' , name)
+                formdata.append('email' , email)
+                formdata.append('password' , password)
+                formdata.append('avatar' , avatar || '')
+
+                const data = await axios.post('http://localhost:3000/api/user/sign-up' , formdata);
+                
+                // if(data){
+                    console.log('the response from the backend is')
+                
+
+        } catch (error) {
+            
+            console.error('something went wrong at the time of the signup' , error)
+            
+        }
     }
 
     return (
@@ -32,18 +51,18 @@ export default function FieldInput() {
 
                         <Field>
                             <FieldLabel htmlFor="username">Username</FieldLabel>
-                            <Input id="username" type="text" className= "placeholder:text-green-600" placeholder="samanvaya vats" />
+                            <Input id="username" type="text" className= "placeholder:text-green-600" placeholder="samanvaya vats" onChange={(e)=>{setname(e.target.value)}}/>
                         </Field>
 
+                            <Field>
+                                <FieldLabel htmlFor="email" >Email</FieldLabel>
+                                <Input id="email" type="email" className= "placeholder:text-green-600" placeholder="samanvaya@gmail.com" onChange={(e)=>{setemail(e.target.value)}} />
+                            </Field>
                         <Field>
                             <FieldLabel htmlFor="password">Password</FieldLabel>
-                            <Input id="password" type="password" className= "placeholder:text-green-600" placeholder="••••••••" />
+                            <Input id="password" type="password" className= "placeholder:text-green-600" placeholder="••••••••" onChange={(e)=>{setpassword(e.target.value)}}/>
                         </Field>
 
-                        <Field>
-                            <FieldLabel htmlFor="email" >Email</FieldLabel>
-                            <Input id="email" type="email" className= "placeholder:text-green-600" placeholder="samanvaya@gmail.com" />
-                        </Field>
 
                         <Field>
                             
