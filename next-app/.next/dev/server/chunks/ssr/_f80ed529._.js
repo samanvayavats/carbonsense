@@ -336,12 +336,21 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$avatar$2
 ;
 function FieldInput() {
     const [avatar, setAvatar] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [name, setname] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
+    const [email, setemail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
+    const [password, setpassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     const handleFileChange = (e)=>{
         const selectedFile = e.target.files?.[0] || null;
         setAvatar(selectedFile);
     };
-    const handleSubmit = ()=>{
-        console.log("Avatar file:", avatar);
+    const handleSubmit = async ()=>{
+        try {
+            const formdata = new FormData();
+            formdata.append('name', name);
+            formdata.append('email', email);
+            formdata.append('password', password);
+            formdata.append('avatar', avatar || '');
+        } catch (error) {}
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full flex justify-center",
@@ -357,49 +366,26 @@ function FieldInput() {
                                     children: "Username"
                                 }, void 0, false, {
                                     fileName: "[project]/app/signup/page.tsx",
-                                    lineNumber: 34,
+                                    lineNumber: 46,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
                                     id: "username",
                                     type: "text",
                                     className: "placeholder:text-green-600",
-                                    placeholder: "samanvaya vats"
+                                    placeholder: "samanvaya vats",
+                                    onChange: (e)=>{
+                                        setname(e.target.value);
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/signup/page.tsx",
-                                    lineNumber: 35,
+                                    lineNumber: 47,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/signup/page.tsx",
-                            lineNumber: 33,
-                            columnNumber: 25
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$field$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Field"], {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$field$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FieldLabel"], {
-                                    htmlFor: "password",
-                                    children: "Password"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/signup/page.tsx",
-                                    lineNumber: 39,
-                                    columnNumber: 29
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
-                                    id: "password",
-                                    type: "password",
-                                    className: "placeholder:text-green-600",
-                                    placeholder: "••••••••"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/signup/page.tsx",
-                                    lineNumber: 40,
-                                    columnNumber: 29
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/app/signup/page.tsx",
-                            lineNumber: 38,
+                            lineNumber: 45,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$field$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Field"], {
@@ -409,23 +395,55 @@ function FieldInput() {
                                     children: "Email"
                                 }, void 0, false, {
                                     fileName: "[project]/app/signup/page.tsx",
-                                    lineNumber: 44,
-                                    columnNumber: 29
+                                    lineNumber: 51,
+                                    columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
                                     id: "email",
                                     type: "email",
                                     className: "placeholder:text-green-600",
-                                    placeholder: "samanvaya@gmail.com"
+                                    placeholder: "samanvaya@gmail.com",
+                                    onChange: (e)=>{
+                                        setemail(e.target.value);
+                                    }
                                 }, void 0, false, {
                                     fileName: "[project]/app/signup/page.tsx",
-                                    lineNumber: 45,
+                                    lineNumber: 52,
+                                    columnNumber: 33
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/app/signup/page.tsx",
+                            lineNumber: 50,
+                            columnNumber: 29
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$field$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Field"], {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$field$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FieldLabel"], {
+                                    htmlFor: "password",
+                                    children: "Password"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/signup/page.tsx",
+                                    lineNumber: 55,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
+                                    id: "password",
+                                    type: "password",
+                                    className: "placeholder:text-green-600",
+                                    placeholder: "••••••••",
+                                    onChange: (e)=>{
+                                        setpassword(e.target.value);
+                                    }
+                                }, void 0, false, {
+                                    fileName: "[project]/app/signup/page.tsx",
+                                    lineNumber: 56,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/signup/page.tsx",
-                            lineNumber: 43,
+                            lineNumber: 54,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$field$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Field"], {
@@ -435,7 +453,7 @@ function FieldInput() {
                                     children: "Avatar"
                                 }, void 0, false, {
                                     fileName: "[project]/app/signup/page.tsx",
-                                    lineNumber: 50,
+                                    lineNumber: 62,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -445,13 +463,13 @@ function FieldInput() {
                                     onChange: handleFileChange
                                 }, void 0, false, {
                                     fileName: "[project]/app/signup/page.tsx",
-                                    lineNumber: 51,
+                                    lineNumber: 63,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/signup/page.tsx",
-                            lineNumber: 48,
+                            lineNumber: 60,
                             columnNumber: 25
                         }, this),
                         avatar && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Avatar"], {
@@ -460,20 +478,20 @@ function FieldInput() {
                                     src: URL.createObjectURL(avatar)
                                 }, void 0, false, {
                                     fileName: "[project]/app/signup/page.tsx",
-                                    lineNumber: 59,
+                                    lineNumber: 71,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AvatarFallback"], {
                                     children: "CN"
                                 }, void 0, false, {
                                     fileName: "[project]/app/signup/page.tsx",
-                                    lineNumber: 60,
+                                    lineNumber: 72,
                                     columnNumber: 33
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/signup/page.tsx",
-                            lineNumber: 58,
+                            lineNumber: 70,
                             columnNumber: 40
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -482,28 +500,28 @@ function FieldInput() {
                             children: "Submit"
                         }, void 0, false, {
                             fileName: "[project]/app/signup/page.tsx",
-                            lineNumber: 62,
+                            lineNumber: 74,
                             columnNumber: 25
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/signup/page.tsx",
-                    lineNumber: 31,
+                    lineNumber: 43,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/signup/page.tsx",
-                lineNumber: 30,
+                lineNumber: 42,
                 columnNumber: 17
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/signup/page.tsx",
-            lineNumber: 29,
+            lineNumber: 41,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/signup/page.tsx",
-        lineNumber: 28,
+        lineNumber: 40,
         columnNumber: 9
     }, this);
 }
@@ -511,7 +529,6 @@ function FieldInput() {
 "[project]/node_modules/@radix-ui/react-label/node_modules/@radix-ui/react-primitive/dist/index.mjs [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// src/primitive.tsx
 __turbopack_context__.s([
     "Primitive",
     ()=>Primitive,
@@ -520,6 +537,7 @@ __turbopack_context__.s([
     "dispatchDiscreteCustomEvent",
     ()=>dispatchDiscreteCustomEvent
 ]);
+// src/primitive.tsx
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$dom$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-dom.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$slot$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@radix-ui/react-slot/dist/index.mjs [app-ssr] (ecmascript)");
@@ -610,13 +628,13 @@ var Root = Label;
 "[project]/node_modules/@radix-ui/react-avatar/node_modules/@radix-ui/react-context/dist/index.mjs [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// src/create-context.tsx
 __turbopack_context__.s([
     "createContext",
     ()=>createContext2,
     "createContextScope",
     ()=>createContextScope
 ]);
+// src/create-context.tsx
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-runtime.js [app-ssr] (ecmascript)");
 ;
@@ -732,7 +750,6 @@ function composeContextScopes(...scopes) {
 "[project]/node_modules/@radix-ui/react-avatar/node_modules/@radix-ui/react-primitive/dist/index.mjs [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// src/primitive.tsx
 __turbopack_context__.s([
     "Primitive",
     ()=>Primitive,
@@ -741,6 +758,7 @@ __turbopack_context__.s([
     "dispatchDiscreteCustomEvent",
     ()=>dispatchDiscreteCustomEvent
 ]);
+// src/primitive.tsx
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$dom$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-dom.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$slot$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@radix-ui/react-slot/dist/index.mjs [app-ssr] (ecmascript)");
@@ -879,11 +897,11 @@ else {
 "[project]/node_modules/@radix-ui/react-use-is-hydrated/dist/index.mjs [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// src/use-is-hydrated.tsx
 __turbopack_context__.s([
     "useIsHydrated",
     ()=>useIsHydrated
 ]);
+// src/use-is-hydrated.tsx
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$use$2d$sync$2d$external$2d$store$2f$shim$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/use-sync-external-store/shim/index.js [app-ssr] (ecmascript)");
 ;
 function useIsHydrated() {
