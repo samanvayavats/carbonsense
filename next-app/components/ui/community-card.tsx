@@ -11,54 +11,23 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-const communityCard = () => {
+const communityCard = ({communities}:{communities:any}) => {
  
-    const cardData = [{
-        id :Math.random(),
-        CardTitle : "CarbonKills",
-        cardDescription :45,
-        cardCarbon : '4000kg'
-    },
-    {
-        id :Math.random(),
-        CardTitle : "CarbonKills",
-        cardDescription :45,
-        cardCarbon : '4000kg'
-    },
-    {
-        id :Math.random(),
-        CardTitle : "CarbonKills",
-        cardDescription :45,
-        cardCarbon : '4000kg'
-    },
-    {
-        id :Math.random(),
-        CardTitle : "CarbonKills",
-        cardDescription :45,
-        cardCarbon : '4000kg'
-    },
-    {
-        id :Math.random(),
-        CardTitle : "CarbonKills",
-        cardDescription :45,
-        cardCarbon : '4000kg'
-    },
-    ]
-    
+   
     return (
        <div>
         {
-             cardData.map((i)=>{
+             communities.map((i:any)=>{
                 return <Card key={i.id} className='m-6'>
             <CardHeader>
-                <CardTitle>{i.CardTitle}</CardTitle>
-                <CardDescription>{i.cardCarbon}</CardDescription>
-                <p>{i.cardDescription}</p>
+                <CardTitle>{i.communityName}</CardTitle>
+                <CardDescription>{i.totalCarbonEmission}</CardDescription>
+                <p>{i.totalParticipants}</p>
                    <Link href={`/community/${i.id}`}><Button className='py-4 px-20 text-green-700' variant={'outline'} > Explore</Button></Link>
             <CardContent>
             </CardContent>
                 <CardAction><Avatar>
-                    <AvatarImage src="https://github.com/shadcn.png" />
+                    <AvatarImage src={i.communityAvatar} />
                     <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
                 </CardAction>

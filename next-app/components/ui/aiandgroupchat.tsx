@@ -7,8 +7,10 @@ import {
   InputGroupAddon,
   InputGroupButton,
 } from "@/components/ui/input-group"
-
-const AiAndGroupChat = () => {
+import { io } from "socket.io-client";
+import { useEffect } from "react";
+import { Socket } from "dgram";
+const AiAndGroupChat = ({id}:{id:string}) => {
   const [messages, setMessages] = useState([
     { id: 1, sender: "ai", text: "Hello 👋 How can I help you?" },
     { id: 2, sender: "user", text: "Build a chat interface" },
@@ -26,11 +28,20 @@ const AiAndGroupChat = () => {
     { id: 255, sender: "user", text: "Build a chat interface" },
     { id: 101, sender: "ai", text: "Hello 👋 How can I help you?" },
     { id: 201, sender: "user", text: "Build a chat interface" },
-    { id: 144, sender: "ai", text: "Hello 👋 How can I help you?" },
+    { id: 1044, sender: "ai", text: "Hello 👋 How can I help you?" },
     { id: 42, sender: "user", text: "Build a chat interface" },
   ])
 
+  
+  useEffect(() => {
+    const socket  = io('http://localhost:4000')
+    socket.emit('joinRoom',id)
+
+  }, [])
+  
+
   return (
+
     <div className="flex flex-col h-screen w-full bg-background">
 
       {/* CHAT MESSAGES */}

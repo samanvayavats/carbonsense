@@ -6,7 +6,7 @@ const page = ({params} : {params : Promise<{id : string}>}) => {
   return (
     <div className='w-full'>
       this is the Community chat for the id : {id}
-         <Aiandgroupchat/>
+         <Aiandgroupchat id = {id}/>
     </div>
   )
 }

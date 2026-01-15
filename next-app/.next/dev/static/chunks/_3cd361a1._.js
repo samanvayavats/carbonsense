@@ -287,7 +287,7 @@ const AiAndGroupChat = ()=>{
             text: "Build a chat interface"
         },
         {
-            id: 144,
+            id: 1044,
             sender: "ai",
             text: "Hello 👋 How can I help you?"
         },
@@ -312,19 +312,19 @@ const AiAndGroupChat = ()=>{
                                 children: msg.sender.toUpperCase()
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/aiandgroupchat.tsx",
-                                lineNumber: 47,
+                                lineNumber: 48,
                                 columnNumber: 15
                             }, ("TURBOPACK compile-time value", void 0)),
                             msg.text
                         ]
                     }, msg.id, true, {
                         fileName: "[project]/components/ui/aiandgroupchat.tsx",
-                        lineNumber: 39,
+                        lineNumber: 40,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0)))
             }, void 0, false, {
                 fileName: "[project]/components/ui/aiandgroupchat.tsx",
-                lineNumber: 37,
+                lineNumber: 38,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -340,7 +340,7 @@ const AiAndGroupChat = ()=>{
                                 className: "w-full resize-none rounded-md bg-transparent px-3 py-2.5 text-sm outline-none"
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/aiandgroupchat.tsx",
-                                lineNumber: 57,
+                                lineNumber: 58,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2d$group$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["InputGroupAddon"], {
@@ -351,38 +351,38 @@ const AiAndGroupChat = ()=>{
                                     children: "Send"
                                 }, void 0, false, {
                                     fileName: "[project]/components/ui/aiandgroupchat.tsx",
-                                    lineNumber: 64,
+                                    lineNumber: 65,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/aiandgroupchat.tsx",
-                                lineNumber: 63,
+                                lineNumber: 64,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ui/aiandgroupchat.tsx",
-                        lineNumber: 56,
+                        lineNumber: 57,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/components/ui/aiandgroupchat.tsx",
-                    lineNumber: 55,
+                    lineNumber: 56,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/ui/aiandgroupchat.tsx",
-                lineNumber: 54,
+                lineNumber: 55,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/ui/aiandgroupchat.tsx",
-        lineNumber: 34,
+        lineNumber: 35,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(AiAndGroupChat, "C0Ng6wje6tb4//pHDOq6Q3Jcu4Y=");
+_s(AiAndGroupChat, "fgW0RqgxdB4majvxs4x1wfqKhZY=");
 _c = AiAndGroupChat;
 const __TURBOPACK__default__export__ = AiAndGroupChat;
 var _c;
