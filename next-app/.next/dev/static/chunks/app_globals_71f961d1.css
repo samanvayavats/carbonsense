@@ -59,6 +59,8 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --color-amber-300: #ffd236;
+    --color-amber-500: #f99c00;
     --color-green-600: #00a544;
     --color-green-700: #008138;
     --color-black: #000;
@@ -103,6 +105,8 @@
 
   @supports (color: lab(0% 0 0)) {
     :root, :host {
+      --color-amber-300: lab(86.4156% 6.13147 78.3961);
+      --color-amber-500: lab(72.7183% 31.8672 97.9407);
       --color-green-600: lab(59.0978% -58.6621 41.2579);
       --color-green-700: lab(47.0329% -47.0239 31.4788);
     }
@@ -1094,6 +1098,14 @@
 
   .bg-accent {
     background-color: var(--accent);
+  }
+
+  .bg-amber-300 {
+    background-color: var(--color-amber-300);
+  }
+
+  .bg-amber-500 {
+    background-color: var(--color-amber-500);
   }
 
   .bg-background {

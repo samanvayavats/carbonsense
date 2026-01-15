@@ -23,18 +23,18 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // const isExits = await prisma.participants.findFirst({
-    //   where: {
-    //     participantsUserId: Number(session?.user?.id),
-    //   },
-    // });
+    const isExits = await prisma.participants.findFirst({
+      where: {
+        participantsUserId: Number(session?.user?.id),
+      },
+    });
 
-    // if (isExits) {
-    //   return NextResponse.json(
-    //     { message: "You are already there in the community" },
-    //     { status: 401 },
-    //   );
-    // }
+    if (isExits) {
+      return NextResponse.json(
+        { message: "You are already there in the community" },
+        { status: 401 },
+      );
+    }
 
     const community = await prisma.communities.findFirst({
       where: {
