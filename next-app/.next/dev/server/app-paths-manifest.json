@@ -2,7 +2,6 @@
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
   "/api/community/all-communities/route": "app/api/community/all-communities/route.js",
   "/api/community/current-community/route": "app/api/community/current-community/route.js",
-  "/community-chats/[...id]/page": "app/community-chats/[...id]/page.js",
   "/community/[...id]/page": "app/community/[...id]/page.js",
   "/page": "app/page.js"
 }

@@ -1,93 +1,109 @@
-[00:00:02.441] Server  LOG     ✓ Ready in 1862ms
-[00:01:58.190] Server  LOG     the community id is  "6"
-[00:02:00.746] Server  LOG     the community id is  "6"
-[00:03:03.318] Server  LOG     ✓ Compiled in 1008ms
-[00:03:08.243] Server  LOG     ✓ Compiled in 87ms
-[00:03:51.522] Server  LOG     ✓ Compiled in 112ms
-[00:04:19.776] Browser ERROR   Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
+[00:00:02.425] Server  LOG     ✓ Ready in 1817ms
+[00:00:15.784] Server  LOG     the error at the time of creating the community is :  PrismaClientInitializationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany()` invocation in
+D:\projects\carbonsense\next-app\.next\dev\server\chunks\[root-of-the-server]__b58c9c25._.js:215:168
 
-Check the render method of `AiAndGroupChat`. 
-[00:05:50.531] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+  212         status: 401
+  213     });
+  214 }
+→ 215 const community = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany(
+Can't reach database server at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`
 
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
+Please make sure your database server is running at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`.
+[00:00:15.898] Browser ERROR   Error fetching communities: {"code":"ERR_BAD_RESPONSE","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"http://localhost:3000/api/community/all-communities","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 500","name":"AxiosError","stack":"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3479:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3994:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:4798:49)\n    at async Page.useEffect.fetchData (http://localhost:3000/_next/static/chunks/_519766f9._.js:741:37)","status":500}
+[00:00:21.799] Server  LOG     the error at the time of creating the community is :  PrismaClientInitializationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany()` invocation in
+D:\projects\carbonsense\next-app\.next\dev\server\chunks\[root-of-the-server]__b58c9c25._.js:215:168
 
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+  212         status: 401
+  213     });
+  214 }
+→ 215 const community = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany(
+Can't reach database server at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`
 
-%s%s https://react.dev/link/hydration-mismatch 
+Please make sure your database server is running at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`.
+[00:00:21.948] Server  LOG     the error at the time of creating the community is :  PrismaClientInitializationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany()` invocation in
+D:\projects\carbonsense\next-app\.next\dev\server\chunks\[root-of-the-server]__b58c9c25._.js:215:168
 
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/community..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <script>
-                      <RootLayout>
-                        <html lang="en">
-                          <body
--                           cz-shortcut-listen="true"
-                          >
-                  ...
+  212         status: 401
+  213     });
+  214 }
+→ 215 const community = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany(
+Can't reach database server at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`
 
-[00:07:34.246] Server  LOG     ✓ Compiled in 170ms
-[00:07:41.513] Browser ERROR   Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. 
+Please make sure your database server is running at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`.
+[00:00:22.055] Browser ERROR   Error fetching communities: {"code":"ERR_BAD_RESPONSE","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"http://localhost:3000/api/community/all-communities","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 500","name":"AxiosError","stack":"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3479:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3994:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:4798:49)\n    at async Page.useEffect.fetchData (http://localhost:3000/_next/static/chunks/_519766f9._.js:741:37)","status":500}
+[00:01:44.587] Server  LOG     the error at the time of creating the community is :  PrismaClientInitializationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany()` invocation in
+D:\projects\carbonsense\next-app\.next\dev\server\chunks\[root-of-the-server]__b58c9c25._.js:215:168
 
-Check the render method of `AiAndGroupChat`. 
-[00:07:41.513] Browser ERROR   uncaughtError: Error: Objects are not valid as a React child (found: object with keys {id, sender, text}). If you meant to render a collection of children, use an array instead.
-[00:08:15.281] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:08:15.290] Server  LOG     ✓ Compiled in 74ms
-[00:09:45.120] Server  LOG     ✓ Compiled in 371ms
-[00:15:00.890] Server  LOG     ✓ Compiled in 407ms
-[00:16:52.064] Server  LOG     ✓ Compiled in 209ms
-[00:17:20.059] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+  212         status: 401
+  213     });
+  214 }
+→ 215 const community = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany(
+Can't reach database server at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`
 
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
+Please make sure your database server is running at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`.
+[00:01:44.720] Server  LOG     the error at the time of creating the community is :  PrismaClientInitializationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany()` invocation in
+D:\projects\carbonsense\next-app\.next\dev\server\chunks\[root-of-the-server]__b58c9c25._.js:215:168
 
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+  212         status: 401
+  213     });
+  214 }
+→ 215 const community = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany(
+Can't reach database server at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`
 
-%s%s https://react.dev/link/hydration-mismatch 
+Please make sure your database server is running at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`.
+[00:01:44.827] Browser ERROR   Error fetching communities: {"code":"ERR_BAD_RESPONSE","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"http://localhost:3000/api/community/all-communities","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 500","name":"AxiosError","stack":"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3479:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3994:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:4798:49)\n    at async Page.useEffect.fetchData (http://localhost:3000/_next/static/chunks/_519766f9._.js:741:37)","status":500}
+[00:03:00.862] Server  LOG     the error at the time of creating the community is :  PrismaClientInitializationError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany()` invocation in
+D:\projects\carbonsense\next-app\.next\dev\server\chunks\[root-of-the-server]__b58c9c25._.js:215:168
 
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/community..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <script>
-                      <script>
-                      <RootLayout>
-                        <html lang="en">
-                          <body
--                           cz-shortcut-listen="true"
-                          >
-                  ...
+  212         status: 401
+  213     });
+  214 }
+→ 215 const community = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany(
+Can't reach database server at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`
 
-[00:17:54.963] Server  LOG     ✓ Compiled in 148ms
-[00:18:04.152] Server  LOG     ✓ Compiled in 148ms
+Please make sure your database server is running at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`.
+[00:03:00.972] Browser ERROR   Error fetching communities: {"code":"ERR_BAD_RESPONSE","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"http://localhost:3000/api/community/all-communities","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 500","name":"AxiosError","stack":"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3479:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3994:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:4798:49)\n    at async Page.useEffect.fetchData (http://localhost:3000/_next/static/chunks/_519766f9._.js:741:37)","status":500}
+[00:15:31.613] Server  LOG     the error at the time of creating the community is :  PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany()` invocation in
+D:\projects\carbonsense\next-app\.next\dev\server\chunks\[root-of-the-server]__b58c9c25._.js:215:168
+
+  212         status: 401
+  213     });
+  214 }
+→ 215 const community = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findMany(
+Can't reach database server at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`.
+[00:15:31.727] Browser ERROR   Error fetching communities: {"code":"ERR_BAD_RESPONSE","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"http://localhost:3000/api/community/all-communities","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 500","name":"AxiosError","stack":"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3479:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3994:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:4798:49)\n    at async Page.useEffect.fetchData (http://localhost:3000/_next/static/chunks/_519766f9._.js:741:37)","status":500}
+[00:53:09.071] Server  LOG     the community id is  "6"
+[00:53:14.431] Server  LOG     the error at the time of the participantion is :  PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findFirst()` invocation in
+D:\projects\carbonsense\next-app\.next\dev\server\chunks\[root-of-the-server]__9d8df4e0._.js:224:168
+
+  221         status: 401
+  222     });
+  223 }
+→ 224 const community = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findFirst(
+Can't reach database server at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`.
+[00:53:14.471] Server  LOG     the community id is  "6"
+[00:53:14.541] Browser ERROR   Error fetching community: {"code":"ERR_BAD_RESPONSE","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"http://localhost:3000/api/community/current-community?communityId=6","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 500","name":"AxiosError","stack":"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3479:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3994:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:4798:49)\n    at async Communities.useEffect.fetchData (http://localhost:3000/_next/static/chunks/_e6beec72._.js:291:37)","status":500}
+[00:53:19.671] Server  LOG     the error at the time of the participantion is :  PrismaClientKnownRequestError: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findFirst()` invocation in
+D:\projects\carbonsense\next-app\.next\dev\server\chunks\[root-of-the-server]__9d8df4e0._.js:224:168
+
+  221         status: 401
+  222     });
+  223 }
+→ 224 const community = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$prisma$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].communities.findFirst(
+Can't reach database server at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`
+
+Please make sure your database server is running at `ep-crimson-wildflower-a4ug41jt-pooler.us-east-1.aws.neon.tech:5432`.
+[00:53:20.697] Browser ERROR   Error fetching community: {"code":"ERR_BAD_RESPONSE","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"http://localhost:3000/api/community/current-community?communityId=6","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 500","name":"AxiosError","stack":"AxiosError: Request failed with status code 500\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3479:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:3994:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_deb23275._.js:4798:49)\n    at async Communities.useEffect.fetchData (http://localhost:3000/_next/static/chunks/_e6beec72._.js:291:37)","status":500}
